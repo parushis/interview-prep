@@ -1,4 +1,4 @@
-package strings_arrays;
+package strings;
 
 public class checkPermutation {
     public static void main(String args[]) {

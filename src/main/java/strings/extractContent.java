@@ -1,6 +1,4 @@
-package strings_arrays;
-
-import java.util.List;
+package strings;
 
 public class extractContent {
     public static void main(String args[]) {
