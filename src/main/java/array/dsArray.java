@@ -8,12 +8,12 @@ import java.util.List;
 public class dsArray  {
     public static void main(String args[]) {
         List<List<Integer>> input2 = new ArrayList<>();
-        List<Integer> one = new ArrayList<>(Arrays.asList(1,1,1,0,0,0));
-        List<Integer> two = new ArrayList<>(Arrays.asList(0,1,0,0,0,0));
-        List<Integer> three = new ArrayList<>(Arrays.asList(1,1,1,0,0,0));
-        List<Integer> four = new ArrayList<>(Arrays.asList(0,9,2,-4,-4,0));
-        List<Integer> five = new ArrayList<>(Arrays.asList(0,0,0,-2,0,0));
-        List<Integer> six = new ArrayList<>(Arrays.asList(0,0,-1,-2,-4,0));
+        List<Integer> one = new ArrayList<>(Arrays.asList(-1,-1,0,-9,-2,-2));
+        List<Integer> two = new ArrayList<>(Arrays.asList(-2,-1,-6,-8,-2,-5));
+        List<Integer> three = new ArrayList<>(Arrays.asList(-1,-1,-1,-2,-3,-4));
+        List<Integer> four = new ArrayList<>(Arrays.asList(-1,-9,-2,-4,-4,-5));
+        List<Integer> five = new ArrayList<>(Arrays.asList(-7,-3,-3,-2,-9,-9));
+        List<Integer> six = new ArrayList<>(Arrays.asList(-1,-3,-1,-2,-4,-5));
 
 
         input2.add(one);
@@ -27,7 +27,7 @@ public class dsArray  {
     }
 
     private static int findMaxHour(List<List<Integer>> input) {
-        int maxCount = 0;
+        int maxCount = -100;
 
         // Step 1: Iterate through input
         for(int i = 0; i < input.size() - 2; i++) {
