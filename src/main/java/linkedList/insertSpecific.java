@@ -54,14 +54,15 @@ public class insertSpecific {
     public static void main(String args[]) throws IOException {
         SinglyLinkedList input = new SinglyLinkedList();
 
-        input.insertNode(11);
-        input.insertNode(9);
-        input.insertNode(19);
-        input.insertNode(10);
+        input.insertNode(1);
+        input.insertNode(2);
+        input.insertNode(3);
         input.insertNode(4);
+        input.insertNode(5);
+         input.insertNode(6);
 
-        int data = 20;
-        int position = 2;
+        int data = 7;
+        int position = 5;
         
         SinglyLinkedListNode output = insertSpecificData(input.head,data,position);
         printSinglyLinkedList(output, " ");
@@ -69,11 +70,11 @@ public class insertSpecific {
 
     private static SinglyLinkedListNode insertSpecificData(SinglyLinkedListNode input, int data, int position) {
         // Step 1: Iterate linked list until correct position is achieved
-        int count = 0;
-        SinglyLinkedListNode current = null;
+        int count = 1;
+        SinglyLinkedListNode current = input;
 
-        while(count != position && input.next != null) {
-            current = input.next;
+        while(count != position && current.next != null) {
+            current = current.next;
             count++;
         }
 
@@ -81,8 +82,7 @@ public class insertSpecific {
         SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
 
         // Step 3: point previous node to new node and have new node point to temp node
-        SinglyLinkedListNode temp =  new SinglyLinkedListNode(current.next.data);
-        temp.next = current.next.next;
+        SinglyLinkedListNode temp =  current.next;
         current.next = newNode;
         newNode.next = temp;
 
