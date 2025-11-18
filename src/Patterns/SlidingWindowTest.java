@@ -1,0 +1,36 @@
+package Patterns;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+
+class SlidingWindowTest {
+
+    SlidingWindow slidingWindow = new SlidingWindow();
+
+    @Test
+    // Maximum Sum sub array of size 'k'
+    public void problemOne(){
+        /*
+        Input: nums = [1,5,4,2,9,9,9], k = 3
+        Output: 15
+        Explanation: The subarrays of nums with length 3 are:
+            - [1,5,4] which meets the requirements and has a sum of 10.
+            - [5,4,2] which meets the requirements and has a sum of 11.
+            - [4,2,9] which meets the requirements and has a sum of 15.
+            - [2,9,9] which does not meet the requirements because the element 9 is repeated.
+            - [9,9,9] which does not meet the requirements because the element 9 is repeated.
+        We return 15 because it is the maximum subarray sum of all the subarrays that meet the conditions
+        */
+
+        int expectedAns = 15;
+        int [] input = new int[] {1,5,4,2,9,9,9};
+        int k = 3;
+        int ans = slidingWindow.maximumSubArray(input,k);
+
+        assertEquals(expectedAns,ans);
+    }
+
+
+}
